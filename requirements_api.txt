@@ -1,0 +1,21 @@
+# API Requirements
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+python-multipart==0.0.6
+
+# Dashboard Requirements
+streamlit==1.28.0
+plotly==5.17.0
+pandas==2.1.3
+requests==2.31.0
+
+# Core Dependencies
+torch>=2.0.0
+numpy>=1.24.0
+yfinance>=0.2.28
+pandas>=2.0.0
+
+# Optional
+python-dotenv==1.0.0
+
