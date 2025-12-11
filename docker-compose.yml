@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app:/app/rl-enhanced-agentic-investment
+    volumes:
+      - ./rl-enhanced-agentic-investment:/app/rl-enhanced-agentic-investment
+      - ~/Downloads:/app/models
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard
+    ports:
+      - "8501:8501"
+    environment:
+      - PYTHONPATH=/app:/app/rl-enhanced-agentic-investment
+    volumes:
+      - ./rl-enhanced-agentic-investment:/app/rl-enhanced-agentic-investment
+      - ~/Downloads:/app/models
+    depends_on:
+      - api
+    restart: unless-stopped
+
