@@ -2,7 +2,7 @@
 
 A comprehensive reinforcement learning system for automated stock research, technical analysis, and investment recommendations using DQN and PPO algorithms with portfolio-level decision making and outcome-based learning.
 
-## 🎯 Features
+## Features
 
 - **Two RL Approaches**: DQN (Value-Based) + PPO (Policy Gradient)
 - **Portfolio-Level Decision Making**: Optimizes stock selection and capital allocation
@@ -13,7 +13,7 @@ A comprehensive reinforcement learning system for automated stock research, tech
 - **Model Evaluation**: Performance metrics and hyperparameter tuning tools
 - **Local Training**: Train models on your machine
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 rl-enhanced-agentic-investment/
@@ -48,7 +48,7 @@ rl-enhanced-agentic-investment/
 └── README.md                   # This file
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Installation
 
@@ -96,7 +96,7 @@ streamlit run dashboard.py
 # Dashboard at: http://localhost:8501
 ```
 
-## 📊 Training
+## Training
 
 ### Stock-Level DQN
 
@@ -132,7 +132,7 @@ The `RL_Stock_Research_DQN.ipynb` notebook is self-contained and can be run in G
 - Pulls live data automatically
 - Includes both DQN and PPO implementations
 
-## 🔧 API Usage
+## API Usage
 
 ### Endpoints
 
@@ -157,7 +157,7 @@ print(f"Recommendation: {result['recommendation']}")
 print(f"Confidence: {result['confidence']:.1%}")
 ```
 
-## 📈 Dashboard Features
+## Dashboard Features
 
 - **Stock Analysis**: Enter any symbol, get recommendations
 - **Portfolio Optimization**: Optimize multi-stock portfolios
@@ -165,27 +165,27 @@ print(f"Confidence: {result['confidence']:.1%}")
 - **Performance Metrics**: Track model performance
 - **Visualizations**: Interactive charts with Plotly
 
-## 🎓 Assignment Requirements
+## Assignment Requirements
 
-✅ **Two RL Approaches**:
+**Two RL Approaches**:
 - DQN (Value-Based Learning)
 - PPO (Policy Gradient Methods)
 
-✅ **Integration with Agentic Systems**:
+**Integration with Agentic Systems**:
 - Agent Orchestration (Portfolio DQN)
 - Research/Analysis Agents (Stock DQN + PPO)
 
-✅ **Portfolio-Level Decision Making**:
+**Portfolio-Level Decision Making**:
 - Stock selection
 - Capital allocation
 - Portfolio rebalancing
 
-✅ **Outcome-Based Learning**:
+**Outcome-Based Learning**:
 - Learns from actual stock returns
 - Tracks recommendations vs outcomes
 - Uses real future prices for rewards
 
-## 🔬 Model Evaluation
+## Model Evaluation
 
 ```python
 from model_improvements import ModelEvaluator
@@ -196,7 +196,7 @@ results = evaluator.evaluate_multiple_stocks(['NVDA', 'AAPL', 'TSLA'])
 metrics = evaluator.calculate_metrics(results)
 ```
 
-## 🐳 Docker Deployment
+## Docker Deployment
 
 ```bash
 # Build and run
@@ -207,7 +207,7 @@ docker run -p 8000:8000 dqn-stock-api
 ./deploy.sh
 ```
 
-## 📝 Key Features
+## Key Features
 
 - **Any Stock Symbol**: Change symbol and train/analyze any stock
 - **Live Data**: Automatically pulls from yfinance
@@ -216,7 +216,7 @@ docker run -p 8000:8000 dqn-stock-api
 - **Production Ready**: API and dashboard for deployment
 - **Local Training**: Train models on your machine
 
-## 🛠️ Development
+## Development
 
 ### Project Components
 
@@ -237,7 +237,7 @@ python test_local_agents.py
 python test_with_crewai_agents.py
 ```
 
-## 📦 Model Files
+## Model Files
 
 Models are saved to:
 - `models/dqn_{symbol}_{episodes}ep.pth` - Stock DQN
@@ -249,7 +249,7 @@ Models can be loaded from:
 - `~/Downloads/` folder
 - Environment variable `DQN_MODEL_PATH`
 
-## 🚀 Deployment
+## Deployment
 
 ### Local
 ```bash
@@ -267,7 +267,7 @@ streamlit run dashboard.py
 - Set environment variables
 - Models auto-load from Downloads or specified path
 
-## 📚 Usage Examples
+## Usage Examples
 
 ### Train on Any Stock
 ```bash
@@ -287,7 +287,7 @@ curl -X POST http://localhost:8000/analyze \
   -d '{"symbol": "NVDA"}'
 ```
 
-## ⚠️ Important Notes
+## Important Notes
 
 - **Rate Limiting**: Built-in 0.5s delay between API calls
 - **Data Caching**: Data cached locally for faster training
@@ -295,7 +295,7 @@ curl -X POST http://localhost:8000/analyze \
 - **Live Data**: All data pulled from yfinance in real-time
 - **GPU Support**: Automatically uses GPU if available
 
-## 🔗 Integration
+## Integration
 
 ### With CrewAI
 ```python
@@ -316,7 +316,7 @@ tool = DQNStockResearchTool()
 result = tool.analyze_stock("NVDA")
 ```
 
-## 📄 License
+## License
 
 Educational project for course assignment.
 
