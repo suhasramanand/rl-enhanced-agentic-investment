@@ -1,0 +1,54 @@
+# React build (generated, should be committed for deployment)
+# frontend/build/
+
+# Node modules
+frontend/node_modules/
+frontend/.pnp
+frontend/.pnp.js
+
+# React build artifacts
+frontend/build/
+frontend/.DS_Store
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+/tmp/
+
+# Data cache
+data_cache/
+*.pkl
+*.pickle
+
+# Experiments
+experiments/results/
+experiments/checkpoints/
+

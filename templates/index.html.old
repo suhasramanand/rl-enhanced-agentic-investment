@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RL-Enhanced Investment Analysis System - Visual Agent Network</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 RL-Enhanced Agentic Investment Research System</h1>
+            <p class="subtitle">Visual Agent Network with Real-Time Orchestration</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Input Section -->
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="company-input">Enter Company Name or Stock Symbol:</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="company-input" placeholder="e.g., NVDA, Apple, Tesla..." 
+                               value="NVDA">
+                        <button id="analyze-btn" onclick="startAnalysis()">Analyze</button>
+                    </div>
+                    <div class="hint">
+                        Supported: NVDA (Nvidia), AAPL (Apple), TSLA (Tesla), JPM (JPMorgan), XOM (ExxonMobil)
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visual Agent Network -->
+            <div class="network-section">
+                <h3>🕸️ Agent Network & Orchestration Flow</h3>
+                <div id="agent-network" class="agent-network"></div>
+            </div>
+
+            <!-- Output Panels -->
+            <div class="outputs-section">
+                <div class="outputs-grid">
+                    <!-- Research Output -->
+                    <div class="output-panel" id="research-panel">
+                        <h4>📰 Research Data</h4>
+                        <div id="research-content" class="output-content"></div>
+                    </div>
+
+                    <!-- Technical Analysis Output -->
+                    <div class="output-panel" id="ta-panel">
+                        <h4>📊 Technical Analysis</h4>
+                        <div id="ta-content" class="output-content"></div>
+                    </div>
+
+                    <!-- Insights Output -->
+                    <div class="output-panel" id="insights-panel">
+                        <h4>💡 AI-Generated Insights</h4>
+                        <div id="insights-content" class="output-content"></div>
+                    </div>
+
+                    <!-- Recommendation Output -->
+                    <div class="output-panel" id="recommendation-panel">
+                        <h4>🎯 Investment Recommendation</h4>
+                        <div id="recommendation-content" class="output-content"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status -->
+            <div id="status-section" class="status-section hidden">
+                <div class="status-card">
+                    <div id="status-message" class="status-message"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
