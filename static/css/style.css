@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+.main-content {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Input Section */
+.input-section {
+    margin-bottom: 30px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #555;
+}
+
+.input-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#company-input {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#company-input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+#analyze-btn {
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#analyze-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+#analyze-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.hint {
+    font-size: 0.9em;
+    color: #666;
+    font-style: italic;
+}
+
+/* Network Section */
+.network-section {
+    margin-bottom: 30px;
+}
+
+.network-section h3 {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.agent-network {
+    width: 100%;
+    height: 600px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    background: #fafafa;
+}
+
+/* Outputs Section */
+.outputs-section {
+    margin-top: 30px;
+}
+
+.outputs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.output-panel {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    border-left: 4px solid #667eea;
+    min-height: 200px;
+}
+
+.output-panel h4 {
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 1.2em;
+}
+
+.output-content {
+    color: #333;
+    line-height: 1.6;
+}
+
+.output-content .data-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+}
+
+.output-content .data-label {
+    font-weight: 600;
+    color: #667eea;
+    margin-right: 10px;
+}
+
+.output-content .data-value {
+    color: #333;
+}
+
+.output-content .insight-item {
+    padding: 12px;
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border-left: 3px solid #f39c12;
+}
+
+.output-content .recommendation-badge {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.output-content .recommendation-badge.buy {
+    background: #28a745;
+    color: white;
+}
+
+.output-content .recommendation-badge.sell {
+    background: #dc3545;
+    color: white;
+}
+
+.output-content .recommendation-badge.hold {
+    background: #ffc107;
+    color: #333;
+}
+
+/* Status Section */
+.status-section {
+    margin-top: 20px;
+}
+
+.status-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+}
+
+.status-message {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .outputs-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    .input-wrapper {
+        flex-direction: column;
+    }
+    
+    #analyze-btn {
+        width: 100%;
+    }
+    
+    .agent-network {
+        height: 400px;
+    }
+}
