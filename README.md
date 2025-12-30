@@ -323,4 +323,4 @@ Educational project for course assignment.
 ---
 
 **Version**: 1.0
-**Last Updated**: 2024
+**Last Updated**: 2025
